@@ -1,13 +1,174 @@
-h1 {
-    color:crimson;
-}
+/* element selector */
 p{
     color:brown;
 }
-button{
-    background-color: black;
-    color:#ffff00;
-}
 body{
     background-color: darkgrey;
+    margin: 0;
+}
+
+/* PRACTICE 1 */
+/* 1 */
+/* id selector */
+#box{
+    background-color: blue;
+    color: antiquewhite;
+}
+/* 2 */
+h1,h2,h3 {
+    color: yellow;
+}
+/* or */
+/* class selector */
+.heading{
+    color: rgb(255,0,0);
+}
+/* pseudo class hover */
+a:hover{
+    color:aquamarine
+}
+/* 3 */
+button{
+    background-color:#00ff00;
+}
+
+
+.textalign{
+    text-align:justify;
+}
+.textdecoration {
+    text-decoration: line-through underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 1px;
+    text-decoration: line-through black solid 3px;
+}
+a{
+    text-decoration: none;
+}
+#textTransform1{
+    text-transform: none;
+}
+#textTransform2{
+    text-transform: capitalize;
+}
+#textTransform3{
+    text-transform: lowercase;
+}
+#textTransform4{
+    text-transform:uppercase ;
+}
+
+#textSpacingLetterSpacing{
+    letter-spacing: 5px;
+}
+#textSpacingWordSpacing{
+    letter-spacing: 1.2px;
+    word-spacing: 5px;
+}
+#lineheight1{
+    line-height: normal;   
+}
+#lineheight2{
+    font-size: 16px;
+    line-height: 1.5;   /* font-size: 16px ka 1.5 times line height i.e.[line height = (1.5*16)px] */  
+}
+#lineheight3{
+    line-height: 30px;   
+}
+/* #textSpacingWhiteSpace{
+    white-space: nowrap;            shows the <p>'s content in single line
+} */
+#textShadow{
+    text-shadow: 2px 2px 2px greenyellow;
+} 
+
+
+#h1{
+    font-weight: normal;
+}
+#h2{
+    font-weight: lighter;
+}
+#h3{
+    font-weight: bold;
+}
+#h4{
+    font-weight: bolder;
+}
+#h5{
+    font-weight:800;
+}
+@font-face {
+    font-family: "bhumiCustomFont";
+    src: url(customfonts/Autumn\ in\ September.ttf) format('truetype');
+}
+#font-family{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'bhumiCustomFont';
+    font-size: 24px;
+    font-style: oblique;
+}
+#two{
+    font-style: italic;
+    font-variant: small-caps;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#three{
+    font-family: serif;
+}
+
+
+#unitspx{
+    font-size:15px;
+}
+#px2{
+    font-size:smaller;
+}
+#perRel1{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    margin: 10px;
+}
+#perRel2{
+    height: 20%;
+    width: 100%;
+    background-color: yellow;
+}
+#emrelative1{
+    height:100px;
+    width:200px;
+    background-color: aquamarine;
+    font-size: 10px;
+    margin:10px;
+}
+#em2{
+    background-color: antiquewhite;
+    font-size: 2em; /* 1em = 10px, 2em = 20px */
+    height: 4em;    /* (4*2*10)px = 80px */   
+    width: 8em;     /* (8*2*10)px = 160px */
+}
+#remRel1{
+    height: 150px;    /* screen page ka 50% */
+    width: 50vw;     /* screen page ka 50% */
+    background-color: rebeccapurple;
+    font-size: 3rem; /* (3*16)px */
+    margin-left: 10px;
+}
+#remRel2{
+    font-size: 2rem;   /* (2*16)px = 32px */
+    height: 2rem;
+    width: 50vw;       /* (9*16)px, [16px is the custom size of the font of the body] */
+    background-color: azure;
+}
+
+/* PRACTICE 2 */
+/* 1 */
+#headingCentered {
+    text-align: center;
+    text-transform: capitalize;
+}
+/* 2 */
+*{
+    font-family: 'Times New Roman', Times, serif;
 }
