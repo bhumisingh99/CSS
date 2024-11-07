@@ -1,0 +1,174 @@
+.posDiv{
+    height: 100px;
+    width: 100px;
+    border: 2px solid coral ;
+    display: inline-block;
+}
+#posDiv1{
+    background-color: cadetblue;
+    position: static;
+}
+#posDiv2{
+    background-color: cornflowerblue;
+    position: relative;
+    top:30px;
+    right:25px;
+    z-index: 1;
+}
+#posDiv3{
+    background-color: lightskyblue;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+#posDiv4{
+    background-color: indianred;
+    position: fixed;
+    top:0;
+}
+/* #posDiv5 a{
+    width:60px;
+    height:40px;
+    background-color: rgb(11, 50, 63);
+    position: sticky;
+    top:50%;
+} */
+#posDiv5 {
+    background-color: lightblue;
+    position: sticky;
+    top:30px;
+}
+
+
+.parent-div{
+    width: 1000px;
+    height: 800px;
+    color:#fff;
+    background: linear-gradient(to right, #514a9d, #24c6dc);
+    box-shadow:rgba(0,0,0,0.1) 0px 4px 12px;
+    border-radius: 15px;
+    position: relative;
+    top:200px;
+    left: 90px;
+}
+.child{
+    width:150px;
+    height:150px;
+    background: linear-gradient(to right, #93edc7, #1cd8d2);
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    color:#514a9d;
+    position: absolute;
+}
+#child2{
+    top:0;
+    right:0;
+}
+#child3{
+    bottom:0;
+    right:0;
+}
+#child4{
+    bottom:0;
+    left:0;
+}
+#child5{
+    left:425px;    /* 1000-150=(850/2)=425 */
+    top:325px;     /*  800-150=(650/2)=325 */
+}
+
+
+.bg-properties{
+    width: 100px;
+    height:100px;
+    display:inline-block;
+    font-size: xx-small;
+}
+#div1{
+    background-color:lightskyblue; 
+    background-image: url("photos/cow.jpg"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#div2{
+    background-color:cornflowerblue ;
+    background-image: url("photos/cow.jpg"); 
+    background-size: contain;
+}
+#div3{
+    background-color:#514a9d;
+    background-image: url("photos/cow.jpg"); 
+    background-size: cover;
+}
+#div4{
+    background-color:navy ;
+    background-image: url("photos/cow.jpg"); 
+    background-size: auto;
+}
+
+/* bg properties */
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    background-image: url("photos/dog.jpg"), url("photos/cow.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-blend-mode: normal;
+}
+
+/* parallax */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section{
+    width:100%;
+    height: 100vh;
+    display:grid;
+    place-items: center;
+    text-align: center;
+    background-attachment: fixed;
+}
+#section-1{
+    background-image: url("photos/work_learning.jpg");
+    background-size: 100% 100%;
+}
+#section-2{
+    background-image: url("photos/learning.jpg");
+    background-size: 100% 100%;
+}
+#section-3{
+    background-image: url("photos/work_learning.jpg");
+    background-size: 100% 100%;
+}
+#section-4{
+    background-image: url("photos/learning.jpg");
+    background-size: 100% 100%;
+}
+h2{
+    font-size: 64px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 4px #171414;
+}
+.paraParallax{
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 3px 3px 4px #171414;
+}
+
+
+#practiceSet{
+    height: 100px;
+    width: 100px;
+    background-image: url("photos/cow.jpg");
+    background-size: cover;
+    position: fixed;
+    right: 0px;
+    bottom:0px;
+    border-radius: 10px;   
+    text-align: center;
+}
