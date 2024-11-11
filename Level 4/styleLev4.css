@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+#flexbox-container{
+    margin: auto;
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    align-content:center;
+}
+.flexbox-item{
+    width: 90px;
+    height: 100px;
+}
+#flexbox-item1{
+    background-color:cadetblue;
+    /* flex-shrink: 1; */
+}
+#flexbox-item2{
+    background-color:darkolivegreen;
+    height: 125px;
+    /* align-self: flex-end; */
+    /* flex-shrink: 3; */
+}
+#flexbox-item3{
+    background-color:darksalmon;
+    height: 75px;
+    /* flex-grow: 2; */
+}
+#flexbox-item4{
+    background-color:darkslategrey;
+}
+#flexbox-item5{
+    background-color:hotpink;
+}
+#flexbox-item6{
+    background-color:indianred;
+    height: 115px;
+    /* align-self: center; */
+}
+#flexbox-item7{
+    background-color:deepskyblue;
+    height: 75px;
+}
+
+
+/* Practice 6 */
+/* 1 */
+.navbar{
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    text-shadow: 2px 2px 2px #fff;
+    color: black;
+}
+/* 2 */
+#outer{
+    margin: auto;
+    background-color: cadetblue;
+    height: 300px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#inner{
+    background-color:darksalmon;
+    height: 100px;
+    width: 100px;
+}
+
+
+/* grid */
+#grid-container{
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    background-color:rgb(230, 226, 210);
+    color:#fff;
+    display: grid;
+    /* grid-template-rows: 150px 150px; */
+    grid-template-rows: repeat(2, 100px);
+    /* grid-template-columns: 150px 150px 150px; */
+    /* grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 3fr 2fr; */
+    /* grid-template-columns: 1fr min-content repeat(1, 1fr);
+        grid-template-columns: 1fr max-content repeat(1, 1fr); */
+    /* grid-template-columns: 1fr minmax(150px, 1fr) repeat(1, 1fr); 
+        or 
+        grid-template-columns: repeat(3, minmax(150px, 1fr)); 
+        or */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* for responsive as screen size is less then the total wd. of item wrap them, so use auto-fill.
+    /* gaps */
+    /* row-gap: 20px;
+        column-gap: 20px; */
+    gap: 10px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 100px;
+    /* align */
+    align-items: end;
+    /* justify */
+    justify-items: center;
+}
+#grid-item1{
+    background-color:darkred;
+    /* replacing with item-5 or moving at the pos of item-5 */
+    /* grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 3; */
+    /* grid-area: 2/2/3/3; */
+}
+#grid-item2{
+    background-color:darkslategray;
+}
+#grid-item3{
+    background-color:darkblue;
+    /* grid-row: 1/2;
+        grid-column: 2/4; */
+}
+#grid-item4{
+    background-color:purple;
+}
+#grid-item5{
+    background-color:darkolivegreen;
+    /* replacing with item-1 or moving at the pos of item-1 */
+    /* grid-column-start: 1;
+        grid-column-end: 2; */
+    /* grid-column: 1/2; */
+    /* grid-row-start: 1;
+        grid-row-end: 2; */
+    /* grid-row: 1/2; */
+}
+#grid-item6{
+    background-color:teal;
+}
+
+
+/* media queries: for reponsiveness */
+#mediaQueries{
+    margin: 8px auto;
+    height: 50px;
+    width: 50px;
+    background-color: cornflowerblue;
+}
+@media(width: 600px){        /* =600; color: aqua*/
+    #mediaQueries{
+        background-color: aquamarine;
+    }
+}
+@media(min-width: 601px){      /* <=601; color: green */
+    #mediaQueries{
+        background-color: rgb(7, 53, 37);
+    }
+}
+@media(max-width: 300px){      /* >=300; color: red */
+    #mediaQueries{
+        background-color: rgb(53, 7, 35);
+    }
+}
+@media(min-width: 400px) and (max-width: 500px){      /* <=400 and >=500; color: blue */
+    #mediaQueries{
+        background-color: rgb(12, 7, 53);
+    }
+}
+
+
+/* practice 7 */
+#practiceQueries{
+    margin: auto;
+    height: 100px;
+    width: 500px;
+    background-color: darksalmon;
+}
+@media(max-width: 300px){     
+    #practiceQueries{
+        background-color: rgb(26, 66, 26);
+    }
+}
+@media(min-width:300px) and (max-width: 400px){     
+    #practiceQueries{
+        background-color: pink;
+    }
+}
+@media(min-width:400px) and (max-width: 600px){     
+    #practiceQueries{
+        background-color: rgb(144, 39, 57);
+    }
+}
+@media(min-width:600px){     
+    #practiceQueries{
+        background-color: rgb(37, 37, 90);
+    }
+}
