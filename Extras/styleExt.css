@@ -1,9 +1,407 @@
-body{
-    background-color: blanchedalmond;
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
 }
+
+/* filter */
 #shadowimg1{
-    box-shadow: 0px 2px 2px 2px black;
+    box-shadow: 0px 0px 8px 4px rgb(16, 16, 16);
 }
 #shadowimg2{
-    filter: drop-shadow(8px 8px 5px black) opacity(0.8);
+    filter: drop-shadow(5px 5px 5px rgb(21, 20, 20)) opacity(0.8);
+}
+
+
+/* gradient */
+#linearGradient{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(11, 2, 11),fuchsia, yellow);
+    background-image: linear-gradient(360deg, fuchsia, yellow );
+    background-image: linear-gradient(to bottom left, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    background-image: linear-gradient(to top left, fuchsia, yellow);
+    background-image: repeating-linear-gradient(to bottom right, rgb(208, 133, 5), yellow 100px);
+    background-image: linear-gradient(to right top, rgba(255, 0, 255, 0.6), rgba(255, 255, 0, 0.6)), url("photos/parrots.jpg");
+    background-size: 100% 100%;
+}
+#radialGradient{
+    width: 100%;
+    height: 100vh;
+    background-image: radial-gradient( red, yellow);
+    background-image: radial-gradient(circle, red, yellow);
+    background-image: radial-gradient(ellipse, red, yellow);
+    background-image: radial-gradient(ellipse, yellow 20%, red 60%, blue 20%);
+    background-image: repeating-radial-gradient(ellipse, yellow, red, blue 50px);
+    background-image: repeating-radial-gradient(circle, #051937, #004d7a, #008793, #00bf72, #a8eb12 30px);
+}
+
+
+/* List properties */
+.lists{
+    width: 500px;
+    margin: 20px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px 0px black;
+    border-radius: 10px;
+}
+.lists li{
+    border: 2px solid #00bf72;
+    margin-bottom: 10px;
+    font-family: 32px;
+    font-weight: 400;
+}
+.lists ul{
+    list-style-type: none;
+    list-style-position: inside;
+    /* list-style-image: url('photos/Peacock.png'); */
+}
+
+
+/* anchor states */
+#anchorStates{
+    background-color: #051937;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px;
+}
+#anchorStates a{
+    text-decoration: none;
+    color:#fff;
+    letter-spacing: 4px;
+    font-variant: small-caps;
+}
+#anchorStates a:link{
+    font-size: 24px;
+    color: aquamarine;
+}
+#anchorStates a:visited{
+    font-size: 50px;
+    color: #a8eb12;
+}
+#anchorStates a:hover{
+    font-size: 20px;
+    color: brown;
+}
+#anchorStates a:active{
+    color: coral;
+}
+
+
+/* combinators */
+#combinators1{
+    margin: 20px; 
+}
+.combinators3 *{
+    color:cornflowerblue;
+}
+/* or */
+.combinators3 li{
+    color:cornflowerblue
+}
+.combinators3 p{
+    font-weight: bold;
+    color: saddlebrown;
+}
+.combinators3 ul li {
+    list-style-type: none;
+    color: #00bf72;
+}
+.combinators3 ul > li {
+    color:chocolate;
+}
+.combinators3 > ul > li {
+    color:deeppink;
+}
+.combinators3 ul p+li {
+    color: blue;
+}
+.combinators3 ul p~li {
+    color:darkorchid;
+}
+.combinators3{
+    display: grid;
+    justify-items: center;
+}
+
+
+/* overflow */
+#overflow-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#overflow-div{
+    text-align: justify;
+    word-spacing: 2px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #051937;
+    width: 400px;
+    height: 200px;
+    overflow: visible;
+    overflow: auto;
+    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;    
+}
+
+
+/* pseudo elements */
+#container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    padding: 64px 70px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    border: 2px solid #a8eb12;
+}
+#grid-two-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+#hero-content{
+    color:#fff;
+    width: auto;
+    /* border: 2px solid #e51e1e; */
+}
+#hero-content h1{
+    font-size: 48px;
+    text-align: left;
+    position: relative;
+    display: inline-block;
+}
+#hero-content h1::before{
+    content: "THAPA TECHNICAL";
+    position: absolute;
+    top: -10px;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+#hero-content h1::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    border-bottom: 5px solid #1dbe6b;
+    width: 62%;
+}
+#hero-content a{
+    text-decoration: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 20px;
+    background-color: transparent;
+}
+#hero-content p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 20px 0 40px 0;
+}
+#hero-content p::first-letter{
+    font-size: 32px;
+    color: brown;
+    font-weight: bold;
+}
+#hero-content p::first-line{
+    text-decoration-line: underline;
+}
+#hero-content p::selection{
+    background-color: rgba(222, 184, 135, 0.5);
+}
+/* placeholder : left */
+#hero-image img{
+    max-width: 70%;
+    height: auto;
+}
+#hero-image{
+    width: auto;
+}
+
+
+/* pseudo class */
+#secpseudo{
+    background-color: black;
+    color: #fff;
+}
+#container-pseudo{
+    height: 100vh;
+    width: 100%;
+    padding: 64px 0;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+#grid{
+    background-color: #fff;
+    height: 250px;
+    width: 60%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);  
+    border-radius: 8px;
+}
+#content-1{
+    color: black;
+    font-size: 24px;
+    list-style-type: none;
+}
+#content-1 ul{
+    list-style-type: none;
+}
+#content-1 p{
+    font-size: 12px;
+    text-align: center;
+    color:red;
+    list-style-type: none;
+}
+/* the li needs to the first-child of content-1 then only this property will work, or not. */
+/* #content-1:first-child{
+    color: red;
+} */
+/* #content-1 ul:first-child{
+    color: red;
+} */
+/* #content-1 ul li:first-child{
+    color: red;
+} */
+/* #content-1 li:first-child {  
+    color: #a8eb12;
+} */
+#content-1 li:nth-of-type(2){
+    color:#008793;
+}
+#content-1 li:first-of-type {
+    color:#873a55;
+}
+#content-1 li:last-of-type {
+    color:#873a55;
+}
+#content-1 li:nth-child(even){
+    color:#008793;
+}
+#content-1 li:nth-child(odd){
+    color: #873a55;
+}
+#content-2{
+    color: black;
+    font-size: 24px;
+}
+#content-2 ul{
+    list-style-type: none;
+}
+.p-class:nth-child(even){
+    color:brown
+}
+
+
+/* column layout */
+#column-layout{
+    background-color: #873a55;
+    width: 100%;
+    height: auto;
+    padding: 8% 20%;
+    word-spacing: 3px;
+    font-weight: 500;
+    text-align: justify;
+}
+#column-layout p{
+    column-count: 3;
+    /* column-rule: 3px dashed #051937; 
+    or */
+    column-rule-color: #051937;
+    column-rule-style: dashed;
+    column-rule-width: 3px;
+    column-gap: 20px;
+    font-size: 12px;
+}
+
+
+/* css variables */
+:root {
+    --main-color: blue;
+    --supporting-color: rgb(144, 29, 167);
+    --font-color: #fff;
+    --bg-color: #104478;
+    --btn-bg-color: black;
+    --timepass-color: rgb(221, 84, 106);
+    --extra-color1: #873a55;
+    --extra-color2: #657088;
+    --extra-color3: #d67733;
+    --font-size: 20px;
+    --font-size-main: 32px;
+}
+#variable-bg{
+    padding: 5%;
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-color);
+}
+#variable-bg h2{
+    font-size: var(--font-size-main);
+}
+#variable-bg div{
+    font-size: var(--font-size);
+}
+.class-1{
+    color: var(--font-color);
+    background-color: var(--supporting-color); 
+}
+.class-2{
+    color: var(--font-color);
+    background-color: var(--main-color);
+}
+.class-3{
+    color: var(--font-color);
+    background-color: var(--extra-color1);
+}
+.class-4{
+    color: var(--font-color);
+    background-color: var(--extra-color2);
+}
+.heading-color{
+    background-color: var(--btn-bg-color);
+    color: var(--timepass-color);
+}
+
+
+/* loader of Extra.html*/
+#alignIt{
+    background-color: #051937;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 30px;
+    border: 8px dashed blue;
+    border-top: 8px dashed blue;
+    animation: spinAnimate 2s ease-in-out 0s infinite normal;    
+}
+@keyframes spinAnimate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
