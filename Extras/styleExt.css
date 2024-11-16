@@ -38,9 +38,15 @@
 
 
 /* List properties */
+#sec-lists{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .lists{
-    width: 500px;
-    margin: 20px;
+    width: 50%;
     padding: 40px;
     background-color: #fff;
     box-shadow: 0px 0px 4px 0px black;
@@ -56,6 +62,7 @@
     list-style-type: none;
     list-style-position: inside;
     /* list-style-image: url('photos/Peacock.png'); */
+    /* list-style-property: ; */
 }
 
 
@@ -156,9 +163,9 @@
 /* pseudo elements */
 #container{
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: black;
-    padding: 64px 70px;
+    padding: 10% 70px;
     margin: 0 auto;
     display: grid;
     align-items: center;
@@ -173,7 +180,7 @@
 #hero-content{
     color:#fff;
     width: auto;
-    /* border: 2px solid #e51e1e; */
+    height: auto;
 }
 #hero-content h1{
     font-size: 48px;
@@ -272,16 +279,16 @@
 /* the li needs to the first-child of content-1 then only this property will work, or not. */
 /* #content-1:first-child{
     color: red;
-} */
-/* #content-1 ul:first-child{
+}
+#content-1 ul:first-child{
+    color: red;
+}
+#content-1 ul li:first-child{
     color: red;
 } */
-/* #content-1 ul li:first-child{
-    color: red;
-} */
-/* #content-1 li:first-child {  
+#content-1 li:first-child {  
     color: #a8eb12;
-} */
+}
 #content-1 li:nth-of-type(2){
     color:#008793;
 }
@@ -330,7 +337,7 @@
     font-size: 12px;
 }
 
-
+ 
 /* css variables */
 :root {
     --main-color: blue;
@@ -376,6 +383,82 @@
 .heading-color{
     background-color: var(--btn-bg-color);
     color: var(--timepass-color);
+}
+
+
+/* :is :has :not :where */
+ul li p,
+ol li p,
+dl li p{
+    color: #657088;
+}
+/* OR */
+:is(ul, ol, ul) li p{
+    color: #203b75;
+}
+/* OR */
+:where(ul, ol, ul) li p{
+    color: #203b75;
+}
+.parent h3{
+    text-align: center;
+}
+.parent:has([type="checkbox"]:checked) label{
+    color: coral;
+}
+.parent input[type="checkbox"] {
+    accent-color: #a8eb12;
+    width: 25px;
+    height: 15px;
+}
+#nav-sec{
+    background-color: #657088;
+    width: 100%;
+    height: auto;
+}
+#nav-sec ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+#nav-sec ul li{
+    border: 2px solid red;
+}
+#nav-sec ul :not(li:first-child){
+    padding-left: 15px;
+}
+
+
+/* logical properties */
+#final{
+    width: 100%;
+    height: 5em;   /* 16*5=80 */
+    background-color: #657088;
+    /* text-align: center;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#final h3{
+    padding: 8px;
+    border: 5px solid red;
+    /* 
+    border-top: 5px solid yellow;
+    border-bottom: 5px solid yellow;
+    border-left: 10px solid black;
+    border-right: 10px solid black;  
+    OR */
+    border-color: #051937 #933242;
+    /* 
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    OR */
+    border-inline: 10px solid pink;
+    /* 
+    border-top: 5px solid yellow;
+    border-bottom: 5px solid yellow; 
+    OR */
+    border-block: 5px dashed purple;
 }
 
 
