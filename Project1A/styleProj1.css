@@ -1,0 +1,446 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    height: 60px;
+    background-color: #0f1111;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* box 1 */
+.nav-logo{
+    height: 50px;
+    width: 100px;
+}
+
+.border{
+    border: 2px solid transparent;
+}
+.border:hover{
+    border: 1px solid #fff;
+}
+
+.logo{
+    background-image: url("images/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+/* box 2 */
+.nav-address{
+    padding: 0.5rem;
+}
+.add-first{
+    color: #cccccc;
+    font-size: 0.75rem;
+    margin-left: 15px;
+}
+.add-icon{
+    display: flex;
+    align-items: center;
+}
+.add-second{
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-left: 5px;
+}
+/* box 3 */
+.nav-search{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #80145f;
+    width: 620px;
+    height: 40px;
+    border-radius: 5px;
+}
+.border1:hover{
+    box-shadow: 0px 1px 5px 2px #ffc0cb;
+}
+.search-select{
+    background-color: #f3f3f3;
+    text-align: center;
+    width: 50px;
+    border-radius: 5px 0px 0px 5px;
+    border:none;
+}
+.search-select:hover{
+   background-color: #c7c3c3;
+}
+.search-input{
+    border-radius: 0px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+.search-icon{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    background-color: #bc3092;
+    border-radius: 0px 5px 5px 0px;
+}
+.search-icon:hover{
+    background-color: #5b1a48;
+}
+
+.outline:focus{
+    outline: none;
+}
+
+/* box 4 */
+.nav-lang{
+    width: 75px;
+    height: 38px;
+    padding: 0.5rem 0rem 0.5rem 0.25rem;
+    display: flex;
+    align-items: center;
+    background-color: #0f1111;
+    & i{
+        font-size: 1rem;
+    }
+}
+.lang-input{
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    background-color: #0f1111;
+    border: none;
+    color: #fff;
+}
+/* box 5 */
+.nav-signin{
+    padding: 0.5rem;
+}
+.signin-first{
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+.signin-second{
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+/* box 6 */
+.nav-orders{
+    padding: 0.5rem;
+}
+.orders-first{
+    color: #cccccc;
+    font-size: 0.75rem;
+}
+.orders-second{
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+/* box 7 */
+.nav-cart{
+    padding: 0.5rem;
+}
+.cart-logo{
+    display: flex;
+    align-items: end;
+    & i{
+        font-size: 1.60rem;
+    }
+    & p{
+        font-size: 0.85rem;
+        font-weight: bold;
+    }   
+}
+
+/* PANEL*/
+.panel{
+    height: 40px;
+    background-color: #1d1e1e;
+    color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.panel-all{
+    display: flex;
+    padding: 0.5rem;
+    & p{
+        margin-left: 5px;
+    }
+}
+.panel-opts{
+    width: 65%;
+    display: flex;
+    font-size: 0.85rem;
+    & p{
+        padding: 0.5rem;
+        margin-left: 15px;
+    }
+}
+.panel-deals{
+    margin-left: 15px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* hero section */
+.hero-section{
+    background-image: url("images/hero_image.jpg");
+    background-size: 100% 100%;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hero-msg{
+    width: 95%;
+    height: 40px;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    & a{
+        color: #007185;
+        text-decoration: none;
+    }
+}
+
+/* boxes */
+/* using flex */
+.shop-section{
+    width: 100%;
+    background-color: #e2e7e6;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: #f3f3f3;
+    height: 400px;
+    width: 23%;
+    padding: 20px 0px 15px;
+    margin: 15px 0px 0px 0px;
+}
+.box1-img{
+    background-image: url("images/box1_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box2-img{
+    background-image: url("images/box2_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box3-img{
+    background-image: url("images/box3_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box4-img{
+    background-image: url("images/box4_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box5-img{
+    background-image: url("images/box5_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box6-img{
+    background-image: url("images/box6_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box7-img{
+    background-image: url("images/box7_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box8-img{
+    background-image: url("images/box8_image.jpg");
+    background-size: cover;
+    height: 300px;
+    margin: 1rem 0rem;
+}
+.box-content{
+    margin: 0px 10px;
+    & h2{
+        font-size: 1.25rem;
+    }
+    & p{
+        color:#007185;
+    }
+    & p:hover{
+        color: #ff7f50;
+    }
+}
+/* using grid */
+/* .shop-section{
+    background-color: #e2e7e6;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 10px 15px 10px 15px;
+}
+.box{
+    background-color: #f3f3f3;
+}
+.box1-img{
+    background-image: url("images/box1_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box2-img{
+    background-image: url("images/box2_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box3-img{
+    background-image: url("images/box3_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box4-img{
+    background-image: url("images/box4_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box5-img{
+    background-image: url("images/box5_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box6-img{
+    background-image: url("images/box6_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box7-img{
+    background-image: url("images/box7_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box8-img{
+    background-image: url("images/box8_image.jpg");
+    background-size: cover;
+    height: 300px;
+    width: auto;
+    margin: 15px 0px;
+}
+.box-content{
+    padding: 10px;
+    & p{
+        color:#007185;
+    }
+    & p:hover{
+        color: #ff7f50;
+    }
+} */
+
+/* footer */
+
+.foot-panel1{
+    margin-top: 15px;
+    height: 50px;
+    background-color: #314255;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & a{
+        text-decoration: none;
+        color: #fff;
+    }
+}
+.foot-panel1:hover{
+    background-color: #49596c;
+}
+.foot-panel2{
+    background-color: #222f3d;
+    color: #fff;
+    height: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 35px 0px;
+    border-bottom: 0.1px solid rgba(221, 221, 221, 0.1);
+    & ul{
+        padding: 0px 10px;
+    }
+    & ul p{
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 6px 0px 14px;
+    }
+    & ul a{
+        text-decoration: none;
+        color: #dddddd;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 0.85rem;
+    }
+    & ul a:hover{
+        text-decoration: underline;
+    }
+}
+.foot-panel3{
+    background-color: #222f3d;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    background-image: url("images/amazon_logo.png");
+    background-size: cover;
+    height: 50px;
+    width: 100px;   
+}
+.foot-panel4{
+    height: 80px;
+    background-color: #111a24;
+    color: #dddddd;
+    padding: 24px 0px 0px;
+}
+.pages{
+    text-align: center;
+    font-size: 0.75rem; 
+    & a:hover{
+        text-decoration: underline;
+    }
+}
+.pages :not(a:last-child){
+    margin-right: 10px;
+}
+.copyright{
+    padding-top: 5px;
+    font-size: 0.75rem;
+    text-align: center;
+}
