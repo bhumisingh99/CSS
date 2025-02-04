@@ -178,7 +178,7 @@
     display: flex;
     font-size: 0.85rem;
     & p{
-        padding: 0.5rem;
+        padding: 0.4rem;
         margin-left: 15px;
     }
 }
@@ -186,6 +186,9 @@
     margin-left: 15px;
     font-size: 0.9rem;
     font-weight: 700;
+    & p{
+        padding: 0.4rem;
+    }
 }
 
 /* hero section */
